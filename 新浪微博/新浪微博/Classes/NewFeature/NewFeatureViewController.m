@@ -25,7 +25,7 @@
 -(void)loadView{
 
     UIImageView *imageView=[[UIImageView alloc]init];
-    imageView.image=[UIImage imageNamed:@"new_feature_background@2x.png"];
+    imageView.image=[UIImage fullscreenImage:@"new_feature_background.png"];
     imageView.frame=[UIScreen mainScreen].applicationFrame;
     imageView.userInteractionEnabled=YES;
     self.view=imageView;
@@ -36,7 +36,9 @@
     [super viewDidLoad];
     
     [self addScrollView];
+    
     [self addScrollImages];
+    
     [self addPageController];
     
    

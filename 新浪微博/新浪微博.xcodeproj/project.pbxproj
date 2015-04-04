@@ -16,8 +16,8 @@
 		ECA9BCD81ACD6F26003F3DEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCBE1ACD6F26003F3DEE /* Default-568h@2x.png */; };
 		ECA9BCD91ACD6F26003F3DEE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCBF1ACD6F26003F3DEE /* Default.png */; };
 		ECA9BCDA1ACD6F26003F3DEE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCC01ACD6F26003F3DEE /* Default@2x.png */; };
-		ECA9BCDB1ACD6F26003F3DEE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCC11ACD6F26003F3DEE /* icon.png */; };
-		ECA9BCDC1ACD6F26003F3DEE /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCC21ACD6F26003F3DEE /* icon@2x.png */; };
+		ECA9BCDB1ACD6F26003F3DEE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCC11ACD6F26003F3DEE /* Icon.png */; };
+		ECA9BCDC1ACD6F26003F3DEE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCC21ACD6F26003F3DEE /* Icon@2x.png */; };
 		ECE64B8B1ACF6B2700C03FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B891ACF6B2700C03FFF /* AppDelegate.m */; };
 		ECE64B8C1ACF6B2700C03FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B8A1ACF6B2700C03FFF /* main.m */; };
 		ECE64B8F1ACF6B9D00C03FFF /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B8E1ACF6B9D00C03FFF /* NewFeatureViewController.m */; };
@@ -77,8 +77,8 @@
 		ECA9BCBE1ACD6F26003F3DEE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		ECA9BCBF1ACD6F26003F3DEE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ECA9BCC01ACD6F26003F3DEE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		ECA9BCC11ACD6F26003F3DEE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		ECA9BCC21ACD6F26003F3DEE /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		ECA9BCC11ACD6F26003F3DEE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		ECA9BCC21ACD6F26003F3DEE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		ECE64B881ACF6B2700C03FFF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECE64B891ACF6B2700C03FFF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ECE64B8A1ACF6B2700C03FFF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 				ECA9BCBE1ACD6F26003F3DEE /* Default-568h@2x.png */,
 				ECA9BCBF1ACD6F26003F3DEE /* Default.png */,
 				ECA9BCC01ACD6F26003F3DEE /* Default@2x.png */,
-				ECA9BCC11ACD6F26003F3DEE /* icon.png */,
-				ECA9BCC21ACD6F26003F3DEE /* icon@2x.png */,
+				ECA9BCC11ACD6F26003F3DEE /* Icon.png */,
+				ECA9BCC21ACD6F26003F3DEE /* Icon@2x.png */,
 			);
 			path = Icon;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				ECA9BC8C1ACD6E6A003F3DEE /* Main.storyboard in Resources */,
 				ECE64BC41ACF7E0E00C03FFF /* new_feature_pagecontrol_point.png in Resources */,
 				ECE64BB01ACF7E0E00C03FFF /* new_feature_1.png in Resources */,
-				ECA9BCDB1ACD6F26003F3DEE /* icon.png in Resources */,
+				ECA9BCDB1ACD6F26003F3DEE /* Icon.png in Resources */,
 				ECE64BB91ACF7E0E00C03FFF /* new_feature_4.png in Resources */,
 				ECE64BC81ACF7E0E00C03FFF /* new_feature_share_true.png in Resources */,
 				ECE64BC11ACF7E0E00C03FFF /* new_feature_finish_button_highlighted@2x.png in Resources */,
@@ -421,7 +421,7 @@
 				ECA9BC911ACD6E6A003F3DEE /* LaunchScreen.xib in Resources */,
 				ECE64BC21ACF7E0E00C03FFF /* new_feature_pagecontrol_checked_point.png in Resources */,
 				ECA9BC8E1ACD6E6A003F3DEE /* Images.xcassets in Resources */,
-				ECA9BCDC1ACD6F26003F3DEE /* icon@2x.png in Resources */,
+				ECA9BCDC1ACD6F26003F3DEE /* Icon@2x.png in Resources */,
 				ECE64BB31ACF7E0E00C03FFF /* new_feature_2.png in Resources */,
 				ECE64BBD1ACF7E0E00C03FFF /* new_feature_background@2x.png in Resources */,
 				ECE64BB61ACF7E0E00C03FFF /* new_feature_3.png in Resources */,
