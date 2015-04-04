@@ -14,16 +14,21 @@
 
 @implementation NewFeatureViewController
 
+-(void)loadView{
+
+    UIImageView *imageView=[[UIImageView alloc]init];
+    imageView.image=[UIImage imageNamed:@""];
+} 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIScrollView *scrollView=[UIScrollView alloc ] ;
     self.view.backgroundColor=[UIColor blueColor];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /*
 #pragma mark - Navigation
