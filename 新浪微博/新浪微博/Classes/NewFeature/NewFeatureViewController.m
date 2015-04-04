@@ -62,23 +62,24 @@
        UIImageView *imageView=[[UIImageView alloc]init];
        NSString *name=[NSString stringWithFormat:@"new_feature_%d.png",i+1];
        imageView.image=[UIImage fullscreenImage:name];
-        imageView.frame=CGRectMake( i*size.width, 0,size.width,size.height);
-        [_scrollView  addSubview:imageView];
+       imageView.frame=CGRectMake(i*size.width, 0, size.width, size.height);
+       [_scrollView  addSubview:imageView];
        
         if (i==kCount-1) {
             UIButton *start=[UIButton buttonWithType:UIButtonTypeCustom];
-            UIImage *startNormal=[UIImage imageNamed:@"new_feature_finish_button@2x.png"];
+            UIImage *startNormal=[UIImage imageNamed:@"new_feature_finish_button.png"];
             [start setBackgroundImage:startNormal forState:UIControlStateNormal];
-            [start setBackgroundImage:[UIImage imageNamed:@"new_feature_finish_button_highlighted@2x.png"] forState:UIControlStateHighlighted];
+            [start setBackgroundImage:[UIImage imageNamed:@"new_feature_finish_button_highlighted.png"] forState:UIControlStateHighlighted];
             start.center=CGPointMake(size.width*0.5, size.height*0.8);
             start.bounds=(CGRect){CGPointZero,startNormal.size};
             [start addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
             [imageView addSubview:start];
+
             
             UIButton *share=[UIButton buttonWithType:UIButtonTypeCustom];
-            UIImage *shareNormal=[UIImage imageNamed:@"new_feature_share_false@2x.png"];
+            UIImage *shareNormal=[UIImage imageNamed:@"new_feature_share_false.png"];
             [share setBackgroundImage:shareNormal forState:UIControlStateNormal];
-            [share setBackgroundImage:[UIImage imageNamed:@"new_feature_share_true@2x.png"] forState:UIControlStateSelected];
+            [share setBackgroundImage:[UIImage imageNamed:@"new_feature_share_true.png"] forState:UIControlStateSelected];
             share.center=CGPointMake(start.center.x, start.center.y-50);
             share.bounds=(CGRect){CGPointZero,shareNormal.size};
             [share addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
@@ -86,7 +87,7 @@
             share.selected=YES;
             share.adjustsImageWhenHighlighted=NO;
             [imageView addSubview:share];
-            share.userInteractionEnabled=YES;
+            imageView.userInteractionEnabled=YES;
             
             
             }
@@ -101,8 +102,8 @@
     UIPageControl *PageController=[[UIPageControl alloc]init];
     PageController.center=CGPointMake(size.width*0.5, size.height*0.95);
     PageController.numberOfPages=kCount;
-    PageController.currentPageIndicatorTintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"new_feature_pagecontrol_checked_point@2x.png"]];
-    PageController.pageIndicatorTintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"new_feature_pagecontrol_point@2x.png"]];
+    PageController.currentPageIndicatorTintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"new_feature_pagecontrol_checked_point.png"]];
+    PageController.pageIndicatorTintColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"new_feature_pagecontrol_point.png"]];
     PageController.bounds=CGRectMake(0, 0, 150, 0);
     [self.view addSubview:PageController];
     _page=PageController;

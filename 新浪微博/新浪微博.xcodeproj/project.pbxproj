@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC446CFB1ACF9A1000121A72 /* UIImage+Thh.m in Sources */ = {isa = PBXBuildFile; fileRef = EC446CFA1ACF9A1000121A72 /* UIImage+Thh.m */; };
+		EC446CFE1ACFB5B400121A72 /* UIImage+Thh.m in Sources */ = {isa = PBXBuildFile; fileRef = EC446CFD1ACFB5B400121A72 /* UIImage+Thh.m */; };
 		ECA9BC861ACD6E6A003F3DEE /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECA9BC841ACD6E6A003F3DEE /* ____.xcdatamodeld */; };
 		ECA9BC8C1ACD6E6A003F3DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BC8A1ACD6E6A003F3DEE /* Main.storyboard */; };
 		ECA9BC8E1ACD6E6A003F3DEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BC8D1ACD6E6A003F3DEE /* Images.xcassets */; };
@@ -63,8 +63,8 @@
 
 /* Begin PBXFileReference section */
 		EC446CF71ACF8CA200121A72 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		EC446CF91ACF9A1000121A72 /* UIImage+Thh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Thh.h"; path = "../../../../../Documents/UIImage+Thh.h"; sourceTree = "<group>"; };
-		EC446CFA1ACF9A1000121A72 /* UIImage+Thh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Thh.m"; path = "../../../../../Documents/UIImage+Thh.m"; sourceTree = "<group>"; };
+		EC446CFC1ACFB5B400121A72 /* UIImage+Thh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thh.h"; sourceTree = SOURCE_ROOT; };
+		EC446CFD1ACFB5B400121A72 /* UIImage+Thh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thh.m"; sourceTree = SOURCE_ROOT; };
 		ECA9BC7A1ACD6E6A003F3DEE /* 新浪微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9BC7E1ACD6E6A003F3DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA9BC851ACD6E6A003F3DEE /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		EC446CF01ACF8A1900121A72 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				EC446CF91ACF9A1000121A72 /* UIImage+Thh.h */,
-				EC446CFA1ACF9A1000121A72 /* UIImage+Thh.m */,
+				EC446CFC1ACFB5B400121A72 /* UIImage+Thh.h */,
+				EC446CFD1ACFB5B400121A72 /* UIImage+Thh.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -450,12 +450,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC446CFE1ACFB5B400121A72 /* UIImage+Thh.m in Sources */,
 				ECE64B8B1ACF6B2700C03FFF /* AppDelegate.m in Sources */,
 				ECE64B8C1ACF6B2700C03FFF /* main.m in Sources */,
 				ECE64B8F1ACF6B9D00C03FFF /* NewFeatureViewController.m in Sources */,
 				ECE64B921ACF714100C03FFF /* MainViewController.m in Sources */,
 				ECA9BC861ACD6E6A003F3DEE /* ____.xcdatamodeld in Sources */,
-				EC446CFB1ACF9A1000121A72 /* UIImage+Thh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
