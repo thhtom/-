@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ECA9BC861ACD6E6A003F3DEE /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECA9BC841ACD6E6A003F3DEE /* ____.xcdatamodeld */; };
-		ECA9BC8C1ACD6E6A003F3DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BC8A1ACD6E6A003F3DEE /* Main.storyboard */; };
 		ECA9BC8E1ACD6E6A003F3DEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BC8D1ACD6E6A003F3DEE /* Images.xcassets */; };
-		ECA9BC911ACD6E6A003F3DEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BC8F1ACD6E6A003F3DEE /* LaunchScreen.xib */; };
 		ECA9BC9D1ACD6E6A003F3DEE /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA9BC9C1ACD6E6A003F3DEE /* ____Tests.m */; };
 		ECA9BCD81ACD6F26003F3DEE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCBE1ACD6F26003F3DEE /* Default-568h@2x.png */; };
 		ECA9BCD91ACD6F26003F3DEE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ECA9BCBF1ACD6F26003F3DEE /* Default.png */; };
@@ -137,9 +135,7 @@
 		ECA9BC7A1ACD6E6A003F3DEE /* 新浪微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9BC7E1ACD6E6A003F3DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA9BC851ACD6E6A003F3DEE /* ____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____.xcdatamodel"; sourceTree = "<group>"; };
-		ECA9BC8B1ACD6E6A003F3DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECA9BC8D1ACD6E6A003F3DEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ECA9BC901ACD6E6A003F3DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ECA9BC961ACD6E6A003F3DEE /* 新浪微博Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "新浪微博Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA9BC9B1ACD6E6A003F3DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA9BC9C1ACD6E6A003F3DEE /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
@@ -307,10 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				ECE64B831ACF6B2700C03FFF /* Classes */,
-				ECA9BC8A1ACD6E6A003F3DEE /* Main.storyboard */,
 				ECA9BC8D1ACD6E6A003F3DEE /* Images.xcassets */,
 				ECA9BC991ACD6E6A003F3DEE /* 新浪微博Tests */,
-				ECA9BC8F1ACD6E6A003F3DEE /* LaunchScreen.xib */,
 				ECA9BC841ACD6E6A003F3DEE /* ____.xcdatamodeld */,
 				ECA9BC7D1ACD6E6A003F3DEE /* Supporting Files */,
 			);
@@ -759,7 +753,6 @@
 				ECCFCE1C1AD1544C001DE34C /* navigationbar_back_right.png in Resources */,
 				ECE64BB21ACF7E0E00C03FFF /* new_feature_2-568h@2x.png in Resources */,
 				ECCFCE1A1AD1544C001DE34C /* navigationbar_back_highlighted.png in Resources */,
-				ECA9BC8C1ACD6E6A003F3DEE /* Main.storyboard in Resources */,
 				ECCFCE1E1AD1544C001DE34C /* navigationbar_back_right_highlighted.png in Resources */,
 				ECCFCDDC1AD15436001DE34C /* tabbar_home_selected.png in Resources */,
 				ECE64BC41ACF7E0E00C03FFF /* new_feature_pagecontrol_point.png in Resources */,
@@ -807,7 +800,6 @@
 				ECE64BBC1ACF7E0E00C03FFF /* new_feature_background.png in Resources */,
 				ECCFCDE61AD15436001DE34C /* tabbar_profile.png in Resources */,
 				ECA9BCD81ACD6F26003F3DEE /* Default-568h@2x.png in Resources */,
-				ECA9BC911ACD6E6A003F3DEE /* LaunchScreen.xib in Resources */,
 				ECCFCDD81AD15436001DE34C /* tabbar_discover_selected.png in Resources */,
 				ECCFCDE31AD15436001DE34C /* tabbar_more@2x.png in Resources */,
 				ECE64BC21ACF7E0E00C03FFF /* new_feature_pagecontrol_checked_point.png in Resources */,
@@ -894,25 +886,6 @@
 			targetProxy = ECA9BC971ACD6E6A003F3DEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ECA9BC8A1ACD6E6A003F3DEE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECA9BC8B1ACD6E6A003F3DEE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ECA9BC8F1ACD6E6A003F3DEE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECA9BC901ACD6E6A003F3DEE /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ECA9BC9E1ACD6E6A003F3DEE /* Debug */ = {

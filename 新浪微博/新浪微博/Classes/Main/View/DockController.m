@@ -42,6 +42,8 @@
     CGFloat height=self.view.frame.size.height-kDockHeight;
     newVc.view.frame=CGRectMake(0, 0, width, height);
     
+    [self.view addSubview:newVc.view];
+    
 }
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Dock.h"
 
 @class Dock;
+
 @protocol DockDelegate <NSObject>
 @optional
 

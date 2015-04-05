@@ -13,7 +13,6 @@
 #import "MeController.h"
 #import "SquareController.h"
 #import "MoreController.h"
-#import "DockController.h"
 #import "Dock.h"
 
 #define kDockHeight 44
@@ -58,7 +57,13 @@
 
 }
 -(void)addDockItems{
+    _dock.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background.png"]];
     
+       [_dock addItemWithIcon:@"tabbar_home.png" selectedIcon:@"tabbar_home_selected.png" title:@"首页"];
+       [_dock addItemWithIcon:@"tabbar_message_center.png" selectedIcon:@"tabbar_message_center_selected.png" title:@"消息"];
+        [_dock addItemWithIcon:@"tabbar_profile.png" selectedIcon:@"tabbar_profile_selected.png" title:@"我"];
+        [_dock addItemWithIcon:@"tabbar_discover.png" selectedIcon:@"tabbar_discover_selected.png" title:@"广场"];
+        [_dock addItemWithIcon:@"tabbar_more.png" selectedIcon:@"tabbar_more_selected.png" title:@"更多"];
 
   
 }
