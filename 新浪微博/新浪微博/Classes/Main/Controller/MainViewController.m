@@ -7,8 +7,18 @@
 //
 
 #import "MainViewController.h"
+#import "WBNavigationController.h"
+#import "HomeController.h"
+#import "MessageController.h"
+#import "MeController.h"
+#import "SquareController.h"
+#import "MoreController.h"
+#import "DockController.h"
+#import "Dock.h"
 
-@interface MainViewController ()
+#define kDockHeight 44
+
+@interface MainViewController ()<DockDelegate>
 
 @end
 
@@ -16,19 +26,70 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor redColor];
+    [self addAllChildControllers];
+    [self addDockItems];
+    
+    //    self.view.backgroundColor=[UIColor redColor];
     // Do any additional setup after loading the view.
 }
 
+-(void)addAllChildControllers{
+    
+    HomeController *home=[[HomeController alloc]init];
+    WBNavigationController *nav1=[[WBNavigationController alloc]initWithRootViewController:home];
+    [self addChildViewController:nav1];
+    
+    MessageController *mesage=[[MessageController alloc]init];
+    WBNavigationController *nav2=[[WBNavigationController alloc]initWithRootViewController:mesage];
+    [self addChildViewController:nav2];
+    
+    MeController *me=[[MeController alloc]init];
+    WBNavigationController *nav3=[[WBNavigationController alloc]initWithRootViewController:me];
+    [self addChildViewController:nav3];
+    
+    SquareController *square=[[SquareController alloc]init];
+    WBNavigationController *nav4=[[WBNavigationController alloc]initWithRootViewController:square];
+    [self addChildViewController:nav4];
+    
+    MoreController *more=[[MoreController alloc]init];
+    WBNavigationController *nav5=[[WBNavigationController alloc]initWithRootViewController:more];
+    [self addChildViewController:nav5];
+    
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+-(void)addDockItems{
+    
+
+  
+}
+
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dock.h"
 
 @interface MainViewController : UIViewController
 
