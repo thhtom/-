@@ -15,6 +15,7 @@
 -(void)viewDidLoad{
 
     [super viewDidLoad];
+    //添加dock
     [self addDock];
     
     
@@ -33,15 +34,15 @@
 -(void)dock:(Dock *)dock itemSelectedFrom:(int)from to:(int)to{
 
     if (to<0||to>=self.childViewControllers.count) return;
-    
+    //移除旧控制器的view
     UIViewController *oldVc=self.childViewControllers[from];
     [oldVc.view removeFromSuperview];
-    
+    //取出即将显示的控制器
     UIViewController *newVc=self.childViewControllers[to];
     CGFloat width=self.view.frame.size.width;
     CGFloat height=self.view.frame.size.height-kDockHeight;
-    newVc.view.frame=CGRectMake(0, 0, width, height);
-    
+    newVc.view.frame=CGRectMake(0, 20, width, height-20);
+    //添加新控制器的view到maincontroller上
     [self.view addSubview:newVc.view];
     
 }

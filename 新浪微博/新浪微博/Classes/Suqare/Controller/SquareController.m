@@ -9,5 +9,13 @@
 #import "SquareController.h"
 
 @implementation SquareController
+-(void)viewDidLoad{
+
+    [super viewDidLoad];
+    //设置标题
+    self.title=@"广场";
+    //设置背景颜色
+    self.view.backgroundColor=[UIColor blueColor];
+}
 
 @end

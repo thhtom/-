@@ -9,5 +9,13 @@
 #import "MeController.h"
 
 @implementation MeController
+-(void)viewDidLoad{
+
+    [super viewDidLoad];
+    //1.设置标题
+    self.title=@"我";
+    //2.设置背景颜色
+    self.view.backgroundColor=[UIColor whiteColor];
+}
 
 @end

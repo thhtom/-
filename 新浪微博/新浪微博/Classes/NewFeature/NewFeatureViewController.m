@@ -21,12 +21,13 @@
 @end
 
 @implementation NewFeatureViewController
-
+#pragma mark 自定义view
 -(void)loadView{
 
     UIImageView *imageView=[[UIImageView alloc]init];
     imageView.image=[UIImage fullscreenImage:@"new_feature_background.png"];
     imageView.frame=[UIScreen mainScreen].applicationFrame;
+    // 给用户交互
     imageView.userInteractionEnabled=YES;
     self.view=imageView;
     
@@ -45,13 +46,14 @@
     //self.view.backgroundColor=[UIColor blueColor];
     // Do any additional setup after loading the view.
 }
+#pragma  mark -UI界面初始化
 -(void)addScrollView{
     UIScrollView *scrollView=[[UIScrollView alloc]init];
     scrollView.frame=self.view.bounds;
-    scrollView.showsHorizontalScrollIndicator=NO;
+    scrollView.showsHorizontalScrollIndicator=NO;//隐藏水平滚动条
     CGSize size=scrollView.frame.size;
-    scrollView.contentSize=CGSizeMake(size.width*kCount, 0);
-    scrollView.pagingEnabled=YES;
+    scrollView.contentSize=CGSizeMake(size.width*kCount, 0);//内容尺寸
+    scrollView.pagingEnabled=YES;//分页
     scrollView.delegate=self;
     [self.view addSubview:scrollView];
     _scrollView=scrollView;
@@ -62,12 +64,15 @@
     for (int i=0; i<kCount; i ++) {
 
        UIImageView *imageView=[[UIImageView alloc]init];
-       NSString *name=[NSString stringWithFormat:@"new_feature_%d.png",i+1];
+       //显示图片
+        NSString *name=[NSString stringWithFormat:@"new_feature_%d.png",i+1];
        imageView.image=[UIImage fullscreenImage:name];
        imageView.frame=CGRectMake(i*size.width, 0, size.width, size.height);
-       [_scrollView  addSubview:imageView];
+        //设置frame
+        [_scrollView  addSubview:imageView];
        
-        if (i==kCount-1) {
+        if (i==kCount-1) {//最后一页添加两个按钮
+            //立即开始
             UIButton *start=[UIButton buttonWithType:UIButtonTypeCustom];
             UIImage *startNormal=[UIImage imageNamed:@"new_feature_finish_button.png"];
             [start setBackgroundImage:startNormal forState:UIControlStateNormal];
@@ -77,16 +82,19 @@
             [start addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
             [imageView addSubview:start];
 
-            
+            //分享
             UIButton *share=[UIButton buttonWithType:UIButtonTypeCustom];
+            //普通状态显示的图片
             UIImage *shareNormal=[UIImage imageNamed:@"new_feature_share_false.png"];
             [share setBackgroundImage:shareNormal forState:UIControlStateNormal];
+            //选中状态下显示的图片
             [share setBackgroundImage:[UIImage imageNamed:@"new_feature_share_true.png"] forState:UIControlStateSelected];
             share.center=CGPointMake(start.center.x, start.center.y-50);
             share.bounds=(CGRect){CGPointZero,shareNormal.size};
             [share addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
-            
+            //设置选中
             share.selected=YES;
+            //按钮在高亮时不需要变成灰色
             share.adjustsImageWhenHighlighted=NO;
             [imageView addSubview:share];
             imageView.userInteractionEnabled=YES;
@@ -97,7 +105,7 @@
     }
     
 }
-
+#pragma  mark 分页指示器
 -(void)addPageController{
 
     CGSize size=self.view.frame.size;
@@ -112,7 +120,8 @@
     
     
 }
-
+#pragma mark 监听按钮
+#pragma mark 开始
 -(void)start{
     
     [UIApplication sharedApplication].statusBarHidden=NO;
@@ -129,11 +138,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark 分享
 -(void)share:(UIButton*)btn{
     
     btn.selected=!btn.selected;
 }
-
+#pragma mark 滚动代理方法
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     _page.currentPage=scrollView.contentOffset.x/scrollView.frame.size.width;

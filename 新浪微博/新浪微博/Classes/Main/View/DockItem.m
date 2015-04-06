@@ -9,7 +9,7 @@
 #import "DockItem.h"
 
 #define kDockItemSelectedBG @"tabbar_slider.png"
-
+//文字的高度比例
 #define kTitleRatio 0.3
 
 @implementation DockItem
@@ -18,14 +18,22 @@
 
     self=[super initWithFrame:frame];
     if (self) {
+//        //文字剧中
         self.titleLabel.textAlignment=NSTextAlignmentCenter;
+        //文字大小
         self.titleLabel.font=[UIFont systemFontOfSize:12];
+        //图片的内容模式
         self.imageView.contentMode=UIViewContentModeCenter;
+        //设置选中时的背景
         [self setBackgroundImage:[UIImage imageNamed:@"kDockItemSelectedBG"] forState:UIControlStateSelected];
     }
     return  self;
 }
+#pragma mark 覆盖父类在高亮时的所有操作
+-(void)setHighlighted:(BOOL)highlighted{
 
+}
+#pragma mark 调整内部imageview的frame
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
 
     CGFloat imageX=0;
@@ -34,11 +42,11 @@
     CGFloat imageHeight=contentRect.size.height*(1-kTitleRatio);
     return CGRectMake(imageX, imageY, imageWidth, imageHeight);
 }
-
+#pragma mark 调整内部UILabel的frame
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
     CGFloat titleX=0;
     CGFloat titleHeight=contentRect.size.height*kTitleRatio;
-    CGFloat titleY=contentRect.size.height-titleHeight;
+    CGFloat titleY=contentRect.size.height-titleHeight-3;
     CGFloat titleWidth=contentRect.size.width;
     return CGRectMake(titleX, titleY, titleWidth, titleHeight);
     

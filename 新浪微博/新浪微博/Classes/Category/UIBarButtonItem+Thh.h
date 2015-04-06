@@ -10,7 +10,7 @@
 
 @interface UIBarButtonItem (Thh)
 -(id)initWithWithIcon:(NSString*)icon highlightedIcon:(NSString*)highlighted target:(id)target action:(SEL)action;
-+(id)initWithWithIcon:(NSString*)icon highlightedIcon:(NSString*)highlighted target:(id)target action:(SEL)action;
++(id)itemWithWithIcon:(NSString*)icon highlightedIcon:(NSString*)highlighted target:(id)target action:(SEL)action;
 
 
 @end
