@@ -8,6 +8,7 @@
 
 #import "MoreController.h"
 #import "UIBarButtonItem+Thh.h"
+#import "UIImage+Thh.h"
 
 @interface MoreController() {
     
@@ -31,13 +32,20 @@
 -(void)buildTableView{
     //这行代码在现在的ISOsdk中貌似已经不起作用了
     //优先级backgroundView>backgroundColor
-    //self.tableView.backgroundView=nil;
+    self.tableView.backgroundView=nil;
     self.tableView.backgroundColor=[UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
     //24bit RGB red green blue  #ffffff 白色  #000000黑色
     //32bit ARGB
-    
-    
+    //设置tableview每组头部的高度
+    self.tableView.sectionHeaderHeight=0;
+    self.tableView.sectionFooterHeight=5;
+//    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+//    btn.backgroundColor=[UIColor redColor];
+//    btn.frame=CGRectMake(20, 20, 20, 30);
+//    self.tableView.tableFooterView=btn;
+    self.tableView.tableFooterView=[UIButton buttonWithType:UIButtonTypeContactAdd];
 }
+
 #pragma mark 搭建UI界面
 -(void)buildUI{
     
@@ -68,6 +76,7 @@
     return [_data[section]count];
     
 }
+#pragma mark 每当有一个新的cell进入屏幕的视野范围之内就调用
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *cellIndentifier=@"cell";
@@ -75,39 +84,55 @@
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIndentifier];
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+        //设置cell的背景view
+        //设置cell背景图片
+        UIImageView *bg1=[[UIImageView alloc]init];
+        cell.backgroundView=bg1;
+        UIImageView *bg2=[[UIImageView alloc]init];
+        cell.selectedBackgroundView=bg2;
+        
         
     }
     //取出这行对应的字典数据
     NSDictionary *dict=_data[indexPath.section][indexPath.row];
     //设置文字
     cell.textLabel.text=dict[@"name"];
-    //设置cell背景图片
-    UIImageView *bg1=[[UIImageView alloc]init];
-    cell.backgroundView=bg1;
-    UIImageView *bg2=[[UIImageView alloc]init];
-    cell.selectedBackgroundView=bg2;
+    cell.textLabel.backgroundColor=[UIColor clearColor];
+   
     
-    //当前组的总行数
-    int count=[_data[indexPath.section]count];
-    if (count==1) {
-        bg1.image=[UIImage imageNamed:@"common_card_background.png"];
-        bg2.image=[UIImage imageNamed:@"common_card_background_highlighted.png"];
-    }
-    else if(indexPath.row==0){
-        
-        bg1.image=[UIImage imageNamed:@""];
-        bg2.image=[UIImage imageNamed:@""];
-    }else if(indexPath.row==count-1){
-        bg1.image=[UIImage imageNamed:@""];
-        bg2.image=[UIImage imageNamed:@""];
-    }else{
-        bg1.image=[UIImage imageNamed:@""];
-        bg2.image=[UIImage imageNamed:@""];
-    }
-    
+//    //当前组的总行数
+//    
+//    UIImageView *bg1=(UIImageView*)cell.backgroundView;
+//    UIImageView *bg2=(UIImageView*)cell.selectedBackgroundView;
+//    int count=[_data[indexPath.section]count];
+//    if (count==1) {
+//       
+//        bg1.image=[UIImage resizedImage:@"common_card_background.png"];
+//        bg2.image=[UIImage resizedImage:@"common_card_background_highlighted.png"];
+//    }
+//    else if(indexPath.row==0){
+//        
+//        bg1.image=[UIImage resizedImage:@"common_card_top_background.png"];
+//        bg2.image=[UIImage resizedImage:@"common_card_top_background_highlighted.png"];
+//    }else if(indexPath.row==count-1){
+//        bg1.image=[UIImage resizedImage:@"common_card_bottom_background.png"];
+//        bg2.image=[UIImage resizedImage:@"common_card_bottom_background_highlighted.png"];
+//    }else{
+//        bg1.image=[UIImage resizedImage: @"common_card_middle_background.png"];
+//        bg2.image=[UIImage resizedImage:@"common_card_middle_background_highlighted.png"];
+//    }
+//    
     return cell;
     
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end
+
+
+
+
 

@@ -8,7 +8,7 @@
 
 #import "UIImage+Thh.h"
 #import "NSString+Thh.h"
-
+#define kImageHeight 5
 @implementation UIImage (Thh)
 #pragma mark 加载全屏图片
 
@@ -26,6 +26,18 @@
     }
     //加载图片
     return [self imageNamed:imageName];
+}
++(UIImage*)resizedImage:(NSString *)imageName{
+     //  图片拉伸
+    //        image=[image stretchableImageWithLeftCapWidth:image.size.width*0.5 topCapHeight:image.size.height*0.5];
+    //        image=[image resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    //        image=[image resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) resizingMode:UIImageResizingModeStretch];
+
+
+    UIImage *image=[UIImage imageNamed:imageName];
+    image=[image resizableImageWithCapInsets:UIEdgeInsetsMake(kImageHeight, kImageHeight, kImageHeight, kImageHeight) resizingMode:UIImageResizingModeStretch];
+    
+    return image;
 }
 
 @end
