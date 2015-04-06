@@ -53,7 +53,7 @@
     WBNavigationController *nav4=[[WBNavigationController alloc]initWithRootViewController:square];
     [self addChildViewController:nav4];
     //更多
-    MoreController *more=[[MoreController alloc]init];
+    MoreController *more=[[MoreController alloc]initWithStyle:UITableViewStyleGrouped];
     WBNavigationController *nav5=[[WBNavigationController alloc]initWithRootViewController:more];
     [self addChildViewController:nav5];
     

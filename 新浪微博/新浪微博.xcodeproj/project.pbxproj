@@ -87,6 +87,7 @@
 		ECCFCE2F1AD1544C001DE34C /* navigationbar_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECCFCE151AD1544C001DE34C /* navigationbar_more@2x.png */; };
 		ECCFCE301AD1544C001DE34C /* navigationbar_more_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = ECCFCE161AD1544C001DE34C /* navigationbar_more_highlighted.png */; };
 		ECCFCE311AD1544C001DE34C /* navigationbar_more_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECCFCE171AD1544C001DE34C /* navigationbar_more_highlighted@2x.png */; };
+		ECD393791AD26779002739F6 /* More.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECD393781AD26779002739F6 /* More.plist */; };
 		ECE64B8B1ACF6B2700C03FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B891ACF6B2700C03FFF /* AppDelegate.m */; };
 		ECE64B8C1ACF6B2700C03FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B8A1ACF6B2700C03FFF /* main.m */; };
 		ECE64B8F1ACF6B9D00C03FFF /* NewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE64B8E1ACF6B9D00C03FFF /* NewFeatureViewController.m */; };
@@ -228,6 +229,7 @@
 		ECCFCE151AD1544C001DE34C /* navigationbar_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_more@2x.png"; sourceTree = "<group>"; };
 		ECCFCE161AD1544C001DE34C /* navigationbar_more_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_more_highlighted.png; sourceTree = "<group>"; };
 		ECCFCE171AD1544C001DE34C /* navigationbar_more_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_more_highlighted@2x.png"; sourceTree = "<group>"; };
+		ECD393781AD26779002739F6 /* More.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = More.plist; sourceTree = "<group>"; };
 		ECE64B881ACF6B2700C03FFF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECE64B891ACF6B2700C03FFF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ECE64B8A1ACF6B2700C03FFF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		ECA9BCA61ACD6F26003F3DEE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ECD393771AD26768002739F6 /* Data */,
 				ECA9BCA71ACD6F26003F3DEE /* Image */,
 				ECA9BCC31ACD6F26003F3DEE /* Other */,
 			);
@@ -569,6 +572,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		ECD393771AD26768002739F6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ECD393781AD26779002739F6 /* More.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		ECE64B831ACF6B2700C03FFF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +761,7 @@
 				ECCFCDDB1AD15436001DE34C /* tabbar_home@2x.png in Resources */,
 				ECCFCE231AD1544C001DE34C /* navigationbar_button_background@2x.png in Resources */,
 				ECCFCDE71AD15436001DE34C /* tabbar_profile@2x.png in Resources */,
+				ECD393791AD26779002739F6 /* More.plist in Resources */,
 				ECCFCE1C1AD1544C001DE34C /* navigationbar_back_right.png in Resources */,
 				ECE64BB21ACF7E0E00C03FFF /* new_feature_2-568h@2x.png in Resources */,
 				ECCFCE1A1AD1544C001DE34C /* navigationbar_back_highlighted.png in Resources */,
